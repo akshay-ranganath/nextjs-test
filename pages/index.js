@@ -1,8 +1,9 @@
 import { AdvancedImage, placeholder, responsive } from '@cloudinary/react'
-import { CloudinaryImage } from '@cloudinary/url-gen'
+import { CloudinaryImage, Delivery } from '@cloudinary/url-gen'
 
 export default function Home () {
   const img = new CloudinaryImage('sample', { cloudName: 'demo' }, { analytics: false })
+  img.quality('auto').format('auto')// .delivery(Delivery.dpr('auto'))
   return (
     <div>
       <div style={{ width: '800px' }}>
